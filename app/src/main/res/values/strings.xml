@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PixabayClient</string>
+    <string name="dialog_title">Choose an item</string>
+    <string name="dialog_question">Would you like to see the details of the selected image?</string>
+    <string name="yes">Yes, sure !</string>
+    <string name="no">No I don\'t want !</string>
+</resources>
