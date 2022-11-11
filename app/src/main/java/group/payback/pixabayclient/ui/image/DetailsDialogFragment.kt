@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import coil.load
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -14,8 +13,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import group.payback.pixabayclient.R
 import group.payback.pixabayclient.databinding.FragmentDialogDetailBinding
-import group.payback.pixabayclient.util.tagView
-import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
@@ -39,35 +36,23 @@ class DetailsDialogFragment : BottomSheetDialogFragment() {
 
             viewmodel.getImageDetails(imageId = imageId!!.toInt())
 
-            lifecycleScope.launch {
-                viewmodel.imageDetails.collect {
+            viewmodel.imageDetails.observe(viewLifecycleOwner) {
 
-                    if (it == null)
-                        return@collect
+                if (it == null)
+                    return@observe
 
-                    binding.apply {
-                        questionArea.visibility = View.GONE
-                        detailArea.visibility = View.VISIBLE
-                        tvLike.text = it.likes.toString()
-                        tvComments.text = it.comments.toString()
-                        tvView.text = it.views.toString()
-                        tvDownload.text = it.downloads.toString()
-                        tvUseName.text = it.user.toString()
-                    }
-
-                    binding.imvImage.load(it.largeImageURL)
-
-                    try {
-                        context?.let { ctx ->
-                            it.tags?.tagView(
-                                ctx,
-                                binding.tagContainer
-                            )
-                        }
-                    } catch (e: Exception) {
-                    }
-
+                binding.apply {
+                    questionArea.visibility = View.GONE
+                    detailArea.visibility = View.VISIBLE
+                    tvLike.text = it.likes.toString()
+                    tvComments.text = it.comments.toString()
+                    tvView.text = it.views.toString()
+                    tvDownload.text = it.downloads.toString()
+                    tvUseName.text = it.user.toString()
                 }
+
+                binding.imvImage.load(it.largeImageURL)
+
             }
         }
 

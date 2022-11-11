@@ -9,7 +9,6 @@ import coil.load
 import group.payback.domain.model.Image
 import group.payback.pixabayclient.databinding.ListItemBinding
 import group.payback.pixabayclient.ui.image.OnItemClickListener
-import group.payback.pixabayclient.util.tagView
 
 class ImageAdapter(private val onItemClickListener: OnItemClickListener) :
     PagingDataAdapter<Image, ImageAdapter.ViewHolder>(DataDifferntiator) {
@@ -23,11 +22,6 @@ class ImageAdapter(private val onItemClickListener: OnItemClickListener) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.view.image.load(getItem(position)?.previewURL)
-
-        try {
-            getItem(position)?.tags?.tagView(holder.view.root.context, holder.view.tagContainer)
-        } catch (e: Exception) {
-        }
 
         holder.view.card.setOnClickListener {
             onItemClickListener.onItemClicked(getItem(position)!!.id)

@@ -32,14 +32,13 @@ class ImageViewModel @Inject constructor(
         }
     }
 
-    private val _image: MutableStateFlow<Image?> = MutableStateFlow(null)
-    val imageDetails: StateFlow<Image?> = _image
+    val imageDetails = MutableLiveData<Image>()
 
     fun getImageDetails(imageId: Int) {
         CoroutineScope(Dispatchers.Default).launch {
             imageUseCases.getLocalImageUseCase.invoke(imageId = imageId).collect {
                 withContext(Dispatchers.Main) {
-                    _image.value = it
+                    imageDetails.postValue(it)
                 }
             }
         }
