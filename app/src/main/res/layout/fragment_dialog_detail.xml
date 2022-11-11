@@ -10,11 +10,11 @@
 
         <variable
             name="view"
-            type="group.payback.pixabayclient.ui.image.DetailsDialogFragment" />
+            type="info.vahidmohammadi.pixabay.images.DetailsDialogFragment" />
 
         <variable
             name="viewModel"
-            type="group.payback.pixabayclient.ui.image.ImageViewModel" />
+            type="info.vahidmohammadi.pixabay.images.ImageViewModel" />
 
     </data>
 

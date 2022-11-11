@@ -8,7 +8,7 @@
 
         <variable
             name="viewmodel"
-            type="group.payback.pixabayclient.ui.image.ImageViewModel" />
+            type="info.vahidmohammadi.pixabay.images.ImageViewModel" />
 
     </data>
 

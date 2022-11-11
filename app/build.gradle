@@ -10,7 +10,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "group.payback.pixabayclient"
+        applicationId "info.vahidmohammadi.pixabay"
         minSdk 23
         targetSdk 32
         versionCode 1
