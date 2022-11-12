@@ -1,4 +1,4 @@
-package info.vahidmohammadi.pixabay.images
+package info.vahidmohammadi.pixabay.imageDetail
 
 import android.app.Dialog
 import android.os.Bundle
@@ -14,13 +14,12 @@ import dagger.hilt.android.AndroidEntryPoint
 import info.vahidmohammadi.pixabay.R
 import info.vahidmohammadi.pixabay.databinding.FragmentDialogDetailBinding
 
-
 @AndroidEntryPoint
 class DetailsDialogFragment : BottomSheetDialogFragment() {
 
     private lateinit var _binding: FragmentDialogDetailBinding
     private val binding get() = _binding
-    val viewmodel by viewModels<ImageViewModel>()
+    val viewmodel by viewModels<ImageDetailModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,

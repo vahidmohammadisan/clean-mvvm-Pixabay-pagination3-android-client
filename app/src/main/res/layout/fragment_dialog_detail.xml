@@ -10,11 +10,11 @@
 
         <variable
             name="view"
-            type="info.vahidmohammadi.pixabay.images.DetailsDialogFragment" />
+            type="info.vahidmohammadi.pixabay.imageDetail.DetailsDialogFragment" />
 
         <variable
             name="viewModel"
-            type="info.vahidmohammadi.pixabay.images.ImageViewModel" />
+            type="info.vahidmohammadi.pixabay.imageList.ImageListModel" />
 
     </data>
 

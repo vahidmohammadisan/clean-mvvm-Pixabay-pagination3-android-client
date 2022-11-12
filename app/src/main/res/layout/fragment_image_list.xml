@@ -8,7 +8,7 @@
 
         <variable
             name="viewmodel"
-            type="info.vahidmohammadi.pixabay.images.ImageViewModel" />
+            type="info.vahidmohammadi.pixabay.imageList.ImageListModel" />
 
     </data>
 

@@ -1,4 +1,4 @@
-package info.vahidmohammadi.pixabay.images
+package info.vahidmohammadi.pixabay.imageList
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import info.vahidmohammadi.pixabay.R
 import info.vahidmohammadi.pixabay.databinding.FragmentImageListBinding
-import info.vahidmohammadi.pixabay.images.adapter.ImageAdapter
+import info.vahidmohammadi.pixabay.imageList.adapter.ImageAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,7 +21,7 @@ class ImageListFragment : Fragment(), OnItemClickListener {
 
     private lateinit var _binding: FragmentImageListBinding
     private val binding get() = _binding
-    val viewmodel by viewModels<ImageViewModel>()
+    val viewmodel by viewModels<ImageListModel>()
     lateinit var imageAdapter: ImageAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {

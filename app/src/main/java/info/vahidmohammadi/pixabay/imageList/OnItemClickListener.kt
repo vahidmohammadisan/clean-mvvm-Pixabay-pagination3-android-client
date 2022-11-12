@@ -1,4 +1,4 @@
-package info.vahidmohammadi.pixabay.images
+package info.vahidmohammadi.pixabay.imageList
 
 interface OnItemClickListener {
     fun onItemClicked(imageId: Int)

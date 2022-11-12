@@ -1,4 +1,4 @@
-package info.vahidmohammadi.pixabay.images.adapter
+package info.vahidmohammadi.pixabay.imageList.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import info.vahidmohammadi.domain.model.Image
 import info.vahidmohammadi.pixabay.databinding.ListItemBinding
-import info.vahidmohammadi.pixabay.images.OnItemClickListener
+import info.vahidmohammadi.pixabay.imageList.OnItemClickListener
 
 class ImageAdapter(private val onItemClickListener: OnItemClickListener) :
     PagingDataAdapter<Image, ImageAdapter.ViewHolder>(DataDifferntiator) {

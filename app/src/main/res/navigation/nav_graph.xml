@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/imageListFragment"
-        android:name="info.vahidmohammadi.pixabay.images.ImageListFragment"
+        android:name="info.vahidmohammadi.pixabay.imageList.ImageListFragment"
         android:label="fragment_image_list"
         tools:layout="@layout/fragment_image_list">
         <action
@@ -20,6 +20,6 @@
     </fragment>
     <dialog
         android:id="@+id/detailsDialogFragment"
-        android:name="info.vahidmohammadi.pixabay.images.DetailsDialogFragment"
+        android:name="info.vahidmohammadi.pixabay.imageDetail.DetailsDialogFragment"
         android:label="DialogFragment" />
 </navigation>
