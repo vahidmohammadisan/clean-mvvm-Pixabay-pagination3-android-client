@@ -2,7 +2,7 @@
 A sample app kotlin, coroutine, pagination3, hilt, livedata, clean and modular 
 
 
-missings:
+missings ant TODO's:
 
-- mapping Domain models to local entities in data layer
+- mapping Api entities to our domain models (with moshi)
 - writing some unit and integration tests
